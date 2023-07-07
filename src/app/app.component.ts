@@ -114,7 +114,10 @@ export class AppComponent {
     if (this.reArrangedCards[cards[0]].name === this.reArrangedCards[cards[1]].name) {
       this.cardsMatch.push(...cards);
       this.spinnedCards = [];
-      this.cardsMatch.length === 12 && alert('Parabéns, você venceu!')
+      if (this.cardsMatch.length === 12) {
+        alert('Parabéns, você venceu!');
+        location.reload();
+      }
       return
     };
 
